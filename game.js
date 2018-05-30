@@ -3,7 +3,8 @@ module.exports = {
   normalFrame,
   spareFrame,
   strikeFrame,
-  ifNormal
+  ifNormal,
+  ifSpare,
   
   
 }
@@ -32,6 +33,12 @@ function ifNormal (frame) {
   if (frame !== 10) {
     return true
   } 
+}
+
+function ifSpare (frame) {
+  if (frame[0] + frame[1] === 10){
+    return true
+  }
 }
 
 
