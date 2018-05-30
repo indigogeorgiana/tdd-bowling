@@ -32,3 +32,28 @@ test('scores a single strike frame', function () {
   const actual = game.singleStrike(frame[0], frame[1])
   expect(actual).toBe(expected)
 })
+
+test('checks wheter a frame is strike', function () {
+  const frame = [10, 0]
+  const expected = true
+  const actual = game.isStrike(frame)
+  expect(actual).toBe(expected)
+})
+
+test('checks whether a frame is spare', function () {
+  const frame = [5, 5]
+  const expected = true
+  const actual = game.isSpare(frame)
+  expect(actual).toBe(expected)
+})
+
+test('scores a double strike frame', function () {
+  const frame = [[10, 0], [10, 0], [5, 4]]
+  const expected = 25
+  const actual = game.doubleStrike(frame[0], frame[1], frame[2])
+  expect(actual).toBe(expected)
+})
+
+
+// test('scores a game', function () {
+// })
