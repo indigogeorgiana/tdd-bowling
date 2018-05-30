@@ -11,7 +11,6 @@ test('scores a gutterball frame', function () {
   expect(actual).toBe(expected)
 })
 
-
 test('scores a normal frame', function () {
   const frame = [2, 3]
   const expected = 5
@@ -54,6 +53,18 @@ test('scores a double strike frame', function () {
   expect(actual).toBe(expected)
 })
 
+test('check isSingleDouble and runs correct strike function', function () {
+  const frame = [[10, 0], [10, 0], [5, 4]]
+  const expected = 25
+  const actual = game.isSingleDouble(frame[0], frame[1], frame[2])
+  expect(actual).toBe(expected)
+})
 
-// test('scores a game', function () {
-// })
+test('scores a game', function () {
+  const frame = [
+    [1, 2], [6, 4], [5, 4], [10, 0], [7, 2], [10, 0], [10, 0], [5, 2], [7, 0], [10, 10, 10]
+  ]
+  const expected = 141
+  const actual = game.scoreFrames(frame)
+  expect(actual).toBe(expected)
+})
