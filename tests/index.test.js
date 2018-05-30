@@ -63,6 +63,16 @@ test('determinds if spare frame ', () => {
   // assert
   expect(actual).toBe(expected)
 })
+
+test('determinds if strike frame ', () => {
+  // arrange
+  const frame = [10,0]
+  const expected = true
+  // act
+  const actual = game.ifStrike(frame)
+  // assert
+  expect(actual).toBe(expected)
+})
 // test('scores a game ', () => {
   // arrange
   //const frame = [[10, 0], [10, 0], [5, 0], [6, 2], [10,0], [3, 7], [6,4], [8, 1], [0, 10], [0,0]]
