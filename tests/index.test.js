@@ -25,3 +25,10 @@ test('scores a spare frame', function () {
   const actual = game.spare(frame)
   expect(actual).toBe(expected)
 })
+
+test('scores a single strike frame', function () {
+  const frame = [[10, 0], [3, 4]]
+  const expected = 17
+  const actual = game.strike(frame)
+  expect(actual).toBe(expected)
+})
