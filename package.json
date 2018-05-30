@@ -4,11 +4,22 @@
   "description": "A kata for test-first design (aka TDD)",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch --noStackTrace"
+    "test": "jest"
   },
   "author": "Don Smith <don@devacademy.co.nz>",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^21.2.1"
-  }
+    "jest": "^23.1.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mamaku-2018/tdd-bowling-kata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mamaku-2018/tdd-bowling-kata/issues"
+  },
+  "homepage": "https://github.com/mamaku-2018/tdd-bowling-kata#readme"
 }
