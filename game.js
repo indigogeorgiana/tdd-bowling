@@ -1,6 +1,7 @@
 module.exports = {
   scoreFrame: scoreFrame,
-  scoreSpare: scoreSpare
+  scoreSpare: scoreSpare,
+  scoreStrike: scoreStrike
 }
 
 // const frame = [2, 3]
@@ -19,4 +20,16 @@ function scoreSpare (frame) {
     }
   }
   return score
+}
+
+function scoreStrike (frame) {
+  let score = 0
+  for (let i = 0; i < frame.length; i++) {
+    if (frame[0] === 10) {
+      score += frame[i]
+    } else if (i === 3) {
+      score += frame[i - 1] + frame[i * 2]
+    }
+    return score
+  }
 }
