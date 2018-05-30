@@ -22,13 +22,13 @@ test('scores a normal frame', function () {
 test('scores a spare frame', function () {
   const frame = [[7, 3], [3, 4]]
   const expected = 13
-  const actual = game.spare(frame)
+  const actual = game.spare(frame[0], frame[1])
   expect(actual).toBe(expected)
 })
 
 test('scores a single strike frame', function () {
   const frame = [[10, 0], [3, 4]]
   const expected = 17
-  const actual = game.strike(frame)
+  const actual = game.singleStrike(frame[0], frame[1])
   expect(actual).toBe(expected)
 })
