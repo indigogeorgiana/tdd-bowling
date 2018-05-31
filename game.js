@@ -2,7 +2,9 @@ module.exports = {
   scoreFrame: scoreFrame,
   scoreSpare: scoreSpare,
   scoreStrike: scoreStrike,
-  scoreDblStrike: scoreDblStrike
+  scoreDblStrike: scoreDblStrike,
+  scoreFramesGame: ScoreFramesGame,
+  scoreGames: scoreGames
 }
 
 // const frame = [2, 3]
@@ -29,10 +31,10 @@ function scoreStrike (frame) {
     if (frame[i] === 10) {
       score += frame[i]
     } else if (i === 3) {
-      score += frame[i - 1] + frame[i] * 2
+      score += (frame[i - 1] * 2) + frame[i] * 2
     }
-    return score
   }
+  return score
 }
 
 function scoreDblStrike (frame) {
@@ -53,4 +55,12 @@ function scoreDblStrike (frame) {
     }  
   }
   return score
+}
+
+function scoreFramesGame (frame) {
+
+}
+
+function scoreGames (frame) {
+  
 }
