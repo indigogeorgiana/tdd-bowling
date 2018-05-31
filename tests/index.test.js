@@ -44,7 +44,7 @@ test('scores a strike frame', () => {
   expect(actual).toBe(expected)
 })
 
-test('determinds if normal frame ', () => {
+test('determines if normal frame ', () => {
   // arrange
   const frame = [5, 4]
   const expected = true
@@ -54,7 +54,7 @@ test('determinds if normal frame ', () => {
   expect(actual).toBe(expected)
 })
 
-test('determinds if spare frame ', () => {
+test('determines if spare frame ', () => {
   // arrange
   const frame = [5, 5]
   const expected = true
@@ -64,21 +64,22 @@ test('determinds if spare frame ', () => {
   expect(actual).toBe(expected)
 })
 
-test('determinds if strike frame ', () => {
+test('determines if strike frame ', () => {
   // arrange
-  const frame = [10,0]
+  const frame = [10, 0]
   const expected = true
   // act
   const actual = game.ifStrike(frame)
   // assert
   expect(actual).toBe(expected)
 })
-// test('scores a game ', () => {
+
+test('scores a game ', () => {
   // arrange
-  //const frame = [[10, 0], [10, 0], [5, 0], [6, 2], [10,0], [3, 7], [6,4], [8, 1], [0, 10], [0,0]]
-  //const expected = 126
+  const frame = [[10, 0], [10, 0], [5, 0], [6, 2], [10,0], [3, 7], [6,4], [8, 1], [0, 10], [0,0]]
+  const expected = 126
   // act
-  //const actual = game.scoresGame(frame)
+  const actual = game.scoresGame(frame)
   // assert
-  //expect(actual).toBe(expected)
-//}) 
+  expect(actual).toBe(expected)
+}) 

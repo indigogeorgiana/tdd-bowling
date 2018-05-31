@@ -5,9 +5,8 @@ module.exports = {
   strikeFrame,
   ifNormal,
   ifSpare,
-  ifStrike
-  
-  
+  ifStrike,
+  scoresGame
 }
 
 function gutterFrame (frame) {
@@ -33,11 +32,11 @@ function strikeFrame (frame) {
 function ifNormal (frame) {
   if (frame !== 10) {
     return true
-  } 
+  }
 }
 
 function ifSpare (frame) {
-  if (frame[0] + frame[1] === 10){
+  if (frame[0] + frame[1] === 10) {
     return true
   }
 }
@@ -48,16 +47,16 @@ function ifStrike (frame) {
   }
 }
 
-
-
-
- //function scoresGame (frame) {
-  //let total = 0
-  //for (let i = 0; i < frame.length; i++) {
-    //if(frame[i][0] === 10) {
-      //total = total + strikeFrame([i])
-    //} else if (frame[i][0] + frame [i][1] === 10) {
-
-    //}
-  //}
-//}
+function scoresGame (frame) {
+  let total = 0
+  for (let i = 0; i < frame.length; i++) {
+    if (ifStrike) {
+      total += strikeFrame(frame[i])
+    } else if (ifSpare) {
+      total += spareFrame(frame[i])
+    } else {
+      total += normalFrame(frame[i])
+    }
+  }
+  return total
+}
